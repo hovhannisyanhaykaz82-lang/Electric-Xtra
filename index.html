@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #000000;
+        /* фон */
+        background-image:
+            linear-gradient(#121212 1px, transparent 1px),
+            linear-gradient(90deg, #121212 1px, transparent 1px);
+        background-size: 40px 40px;
+        /* размер ячейки */
+    }
+</style>
+
+<body class="bg-black">
+    <header class="w-full flex justify-between items-center p-[20px]" id="Home">
+        <div class="w-max flex  gap-[5px]">
+            <a href="">
+                <svg class="logo-svg w-[40px] h-[40px]" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1"></stop>
+                            <stop offset="100%" style="stop-color:#00b3ff;stop-opacity:1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)"
+                        stroke-width="2"></polygon>
+                    <polygon points="20,8 32,16 32,24 20,32 8,24 8,16" fill="url(#logoGradient)" opacity="0.3">
+                    </polygon>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"></circle>
+                </svg>
+            </a>
+            <a href=""
+                class=" flex  bg-gradient-to-r from-[#FF5E00] to-[#00B2FF] bg-clip-text text-transparent font-bold text-3xl">ELEXTRIC
+                XTRA</a>
+        </div>
+        <div class="relative">
+            <input type="checkbox" name="" id="menu" class="peer hidden">
+            <label for="menu" class="cursor-pointer md:hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                    stroke="#FF5E00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </label>
+            <nav class="w-full py-[25px] max-md:py-0 flex  max-md:absolute max-md:top-[100%] max-md:right-0 max-md:w-[170px] max-md:bg-black    max-md:h-0 max-md:overflow-hidden max-md:flex-col
+max-md:peer-checked:h-[250px] max-md:peer-checked:flex  max-md:peer-checked:py-5 transition-all duration-300">
+                <ul
+                    class="flex gap-[15px] w-full  justify-around text-[17px] max-md:flex-col max-md:justify-center max-md:items-center max-md:w-full">
+                    <li
+                        class="w-[85px] h-[40px] hover:border hover:border-[#f5803c] active:border active:border-[#FF5E00] flex items-center justify-center">
+                        <a href="#Home" class="text-white">HOME</a>
+                    </li>
+                    <li
+                        class="w-[100px] h-[40px] hover:border hover:border-[#f5803c] active:border active:border-[#FF5E00] flex items-center justify-center">
+                        <a href="#Features" class="text-white">FEATURES</a>
+                    </li>
+                    <li
+                        class="w-[85px] h-[40px] hover:border hover:border-[#f5803c] active:border active:border-[#FF5E00] flex items-center justify-center">
+                        <a href="#About" class="text-white">ABOUT</a>
+                    </li>
+                    <li
+                        class="w-[100px] h-[40px] hover:border hover:border-[#f5803c] active:border active:border-[#FF5E00] flex items-center justify-center">
+                        <a href="#Contact" class="text-white">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="flex flex-col">
+        <div class="flex flex-col w-full  h-[70vh]">
+            <div class="flex w-full h-[45vh]  flex-col justify-end items-center gap-[10px]">
+                <h1 class="text-white text-[75px]">ELECTRIC DREAM</h1>
+                <p class="text-white">Where technology meets infinite possibilities</p>
+            </div>
+            <div
+                class="flex w-full h-[45vh] gap-[10px] justify-center py-[40px] max-md:flex-col max-md:items-center max-md:gap-[17px]">
+                <button
+                    class=" [box-shadow:0_0_15px_#FF5E00,0_0_25px_#00B2FF] hover:-translate-y-2 transition duration-300 w-[170px] cursor-pointer h-[45px] bg-gradient-to-r from-[#FF5E00] to-[#00B2FF] text-white text-xl max-md:w-[220px]">GET
+                    STARTED</button>
+                <button
+                    class="w-[170px] cursor-pointer h-[45px] text-[#FF5E00] border border-[#FF5E00] hover:border-white hover:-translate-y-2 transition duration-300 hover:text-white max-md:w-[220px]">LEARN
+                    MORE</button>
+            </div>
+        </div>
+        <div class="w-full flex py-[70px] " id="Features">
+            <h2
+                class="text-[50px]  w-full flex justify-center bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+                Core Features</h2>
+        </div>
+        <div class="w-full  flex px-[80px] gap-[100px] max-md:flex-col">
+            <input type="radio" name="tab" id="tab1" class="peer/tab1 hidden" checked>
+            <input type="radio" name="tab" id="tab2" class="peer/tab2 hidden">
+            <input type="radio" name="tab" id="tab3" class="peer/tab3 hidden">
+            <input type="radio" name="tab" id="tab4" class="peer/tab4 hidden">
+            <input type="radio" name="tab" id="tab5" class="peer/tab5 hidden">
+            <div
+                class="flex flex-col gap-[20px] h-[100%] max-md:w-full bg-[rgba(255,255,255,0.03)]  backdrop-blur-md border border-white/10 rounded-2xl w-[30%] p-[20px] shadow-[0_0_25px_rgba(0,178,255,0.15)]">
+
+                <label for="tab1" class="cursor-pointer text-[25px] text-white">⚡ <span
+                        class="text-[15px]">Performance</span></label>
+                <label for="tab2" class="cursor-pointer text-[25px] text-white">🔒 <span
+                        class="text-[15px]">Security</span></label>
+                <label for="tab3" class="cursor-pointer text-[25px] text-white">🌐 <span
+                        class="text-[15px]">Network</span></label>
+                <label for="tab4" class="cursor-pointer text-[25px] text-white">📊 <span
+                        class="text-[15px]">Analytics</span></label>
+                <label for="tab5" class="cursor-pointer text-[25px] text-white">🔧 <span
+                        class="text-[15px]">Integration</span></label>
+            </div>
+            <div class="w-[70%] relative max-md:w-full">
+                <div
+                    class="flex flex-col gap-[20px] bg-[rgba(255,255,255,0.03)] w-[70%] backdrop-blur-md border border-white/10 rounded-xl w-full shadow-[0_0_25px_rgba(0,178,255,0.15)]  peer-checked/tab1:block">
+                    <h2
+                        class="bg-gradient-to-r from-white to-[#FF5E00] bg-clip-text text-transparent font-bold text-3xl px-[20px] py-[30px]">
+                        Lightning Fast Performance</h2>
+                    <p class="text-white px-[20px] text-[20px]">Experience unprecedented speed with our quantum-powered
+                        infrastructure. Built on cutting-edge technology that delivers results at the speed of thought.
+                        Electric Xtra CSS template is brought to you by TemplateMo website.</p>
+                    <ul style="list-style-type:circle" class="text-white px-[40px]">
+                        <li>Sub-millisecond response times</li>
+                        <li>99.99% uptime guarantee</li>
+                        <li>Automatic scaling based on demand</li>
+                        <li>Real-time data synchronization</li>
+                    </ul>
+                </div>
+                <div class="hidden  peer-checked/tab2:block">
+                    <h2
+                        class="bg-gradient-to-r from-white to-[#FF5E00] bg-clip-text text-transparent font-bold text-3xl px-[20px] py-[30px]">
+                        Military-Grade Security</h2>
+                    <p class="text-white px-[20px] text-[20px]">Your data is protected by the most advanced encryption
+                        protocols available. Multi-layered security
+                        ensures complete protection against cyber threats. You may tell your friends about TemplateMo
+                        free
+                        css website and how easy it is.</p>
+                    <ul style="list-style-type: circle;" class="text-white px-[40px]">
+                        <li>256-bit AES encryption</li>
+                        <li>Biometric authentication</li>
+                        <li>Zero-knowledge architecture</li>
+                        <li>Real-time threat detection</li>
+                        <li>Automated security updates</li>
+                    </ul>
+                </div>
+                <div class="hidden peer-checked/tab3:block">
+                    <h2
+                        class="bg-gradient-to-r from-white to-[#FF5E00] bg-clip-text text-transparent font-bold text-3xl px-[20px] py-[30px]">
+                        Global Neural Network</h2>
+                    <p class="text-white px-[20px] text-[20px]">Connect to our worldwide infrastructure that spans
+                        across
+                        continents. Seamless integration with
+                        existing systems and future-proof architecture.</p>
+                    <ul>
+                        <li>200+ global data centers</li>
+                        <li>Intelligent routing algorithms</li>
+                        <li>Cross-platform compatibility</li>
+                        <li>5G and satellite connectivity</li>
+                        <li>Decentralized architecture</li>
+                    </ul>
+                </div>
+                <div class="hidden peer-checked/tab4:block">
+                    <h2
+                        class="bg-gradient-to-r from-white to-[#FF5E00] bg-clip-text text-transparent font-bold text-3xl px-[20px] py-[30px]">
+                        Advanced Analytics</h2>
+                    <p class="text-white px-[20px] text-[20px]">Harness the power of AI-driven insights to make
+                        data-driven
+                        decisions. Real-time analytics and
+                        predictive modeling at your fingertips.</p>
+                    <ul>
+                        <li>Machine learning algorithms</li>
+                        <li>Predictive analytics</li>
+                        <li>Custom dashboard creation</li>
+                        <li>Real-time data visualization</li>
+                        <li>Automated reporting</li>
+                    </ul>
+                </div>
+                <div class="hidden peer-checked/tab5:block">
+                    <h2
+                        class="bg-gradient-to-r from-white to-[#FF5E00] bg-clip-text text-transparent font-bold text-3xl px-[20px] py-[30px]">
+                        Seamless Integration</h2>
+                    <p>Connect with thousands of apps and services through our universal API. Built to work with your
+                        existing tools and workflows.</p>
+                    <ul>
+                        <li>RESTful API architecture</li>
+                        <li>WebSocket support</li>
+                        <li>SDK for major platforms</li>
+                        <li>One-click integrations</li>
+                        <li>Custom webhook support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="About"
+            class="text-[50px] w-full flex justify-center py-[70px] bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+            <h2>About Electric Xtra</h2>
+        </div>
+        <div class=" w-full flex flex-col">
+            <div class="w-full flex max-md:flex-col max-md:gap-[50px]">
+                <div class=" w-[40%] max-md:w-full flex flex-col gap-[10px]">
+                    <h3
+                        class="text-[50px] -mt-[150px] w-full flex px-[55px] justify-center py-[150px] bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+                        Pioneering the Digital Frontier</h3>
+                    <p class="text-white -mt-[150px] px-[55px]">At ELECTRIC XTRA, we're not just building technology –
+                        we're
+                        crafting the future. Our mission is
+                        to bridge the gap between human potential and digital innovation, creating solutions that
+                        empower individuals and transform industries.</p>
+                    <p class="text-white  px-[55px]">Founded by visionaries who saw beyond the limitations of current
+                        technology, ELECTRIC XTRA
+                        represents a quantum leap in digital infrastructure. We combine cutting-edge research with
+                        practical applications to deliver solutions that are both revolutionary and reliable.</p>
+                    <p class="text-white px-[55px]">Join us as we redefine what's possible in the digital age. The
+                        future isn't something that
+                        happens to us – it's something we create together.</p>
+                </div>
+                <div class="w-[60%] py-[100px]  px-[200px]  md:max-lg:px-[80px] md:max-lg:py-[200px] max-md:w-full
+                    max-md:px-0 max-md:py-0 max-md:h-[70vh] max-md:items-center max-md:flex max-md:justify-center">
+                    <div
+                        class="relative w-[300px] h-[300px] [box-shadow:0_0_30px_#FF5E00] flex md:max-lg:w-[230px]  max-md:w-[200px] max-md:h-[200px] md:max-lg:h-[230px] items-center justify-center">
+
+                        <div
+                            class="before:content-[''] before:absolute before:w-[320px] before:max-md:w-[214px] before:max-md:h-[214px] before:md:max-lg:h-[240px] before:md:max-lg:w-[240px] before:h-[320px]  before:border before:rounded-2xl before:border-[#FF5E00] before:rotate-45 before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2">
+                        </div>
+                        <div
+                            class="after:content-[''] after:absolute after:w-[280px] after:max-md:w-[194px] after:max-md:h-[194px] after:h-[280px] after:md:max-lg:h-[220px]  after:md:max-lg:w-[220px] after:md:max-lg:rounded-xl after:border after:rounded-2xl after:border-[#00b3ff] after:rotate-45 after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex p-[50px] gap-[350px] md:max-lg:gap-[60px] max-md:flex-col max-md:gap-[25px]">
+                <div class="w-full flex  items-center max-md:justify-center">
+                    <div
+                        class="relative w-[300px] h-[300px] flex items-center justify-center [box-shadow:0_0_30px_#FF5E00]">
+
+                        <div class="absolute w-[250px] h-[240px] bg-gradient-to-r from-[#FF5E00] to-[#00b3ff] 
+        [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)]
+        opacity-25"></div>
+
+                        <div class="absolute w-[190px] h-[180px] bg-gradient-to-r from-[#FF5E00] to-[#00b3ff] 
+        [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)]
+        opacity-25"></div>
+
+                        <div class="relative w-[130px] h-[120px] bg-gradient-to-r from-[#FF5E00] to-[#00b3ff] 
+        [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)] opacity-25">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-[10px] ">
+                    <h3
+                        class="text-[50px]  w-full flex  justify-end  bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+                        Innovation at Every Level</h3>
+                    <p class="text-white ">Our commitment to excellence drives us to push boundaries and challenge
+                        conventions. With a team
+                        of world-class engineers, designers, and visionaries, we're creating solutions that not only
+                        meet today's needs but anticipate tomorrow's challenges.</p>
+                    <p class="text-white">From quantum computing to neural networks, from blockchain to AI, we're at the
+                        forefront of every
+                        technological revolution. Our integrated approach ensures that each innovation builds upon the
+                        last, creating a synergy that amplifies our impact.</p>
+                    <p class="text-white">Experience the power of true digital transformation. With ELECTRIC XTRA,
+                        you're not just adopting
+                        technology – you're embracing a philosophy of continuous evolution and limitless possibility.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full py-[50px]" id="Contact">
+                <h2
+                    class="text-[50px]  w-full flex justify-center bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+                    Get In Touch</h2>
+            </div>
+            <div class="w-full flex px-[100px] gap-[30px] max-md:flex-col max-md:px-[7px]">
+                <div
+                    class="w-[700px]  [box-shadow:0_0_30px_#FF5E00] rounded-2xl flex items-center justify-center flex-col max-md:w-full">
+                    <div class="flex flex-col w-full p-[30px]">
+                        <h6 class="text-white">NAME</h6>
+                        <input type="text"
+                            class=" bg-transparent h-[40px] text-white rounded-[5px] p-[4px] border-2 border-[#fd8a47] active:border-2 active:border-[#FF5E00]">
+                    </div>
+                    <div class="flex flex-col w-full p-[30px]">
+                        <h6 class="text-white">EMAIL</h6>
+                        <input type="email" class=" bg-transparent text-white h-[40px] p-[4px] rounded-[5px] border-2 border-[#fd8a47]">
+                    </div>
+                    <div class="flex flex-col w-full p-[30px]">
+                        <h6 class="text-white">SUBJECT</h6>
+                        <input type="text" class=" bg-transparent text-white h-[40px] p-[4px] rounded-[5px] border-2 border-[#fd8a47]">
+                    </div>
+                    <div class="flex flex-col w-full p-[30px]">
+                        <h6 class="text-white">MESSAGE</h6>
+                        <input type="text" class=" p-[4px] text-white bg-transparent h-[120px] rounded-[5px] border-2 border-[#fd8a47]">
+                        <button
+                            class=" w-full h-[40px] my-[30px] rounded-[5px] bg-gradient-to-r from-[#FF5E00] to-[#00B2FF] text-white text-xl hover:-translate-y-2 transition duration-300 hover:[box-shadow:0_0_15px_#FF5E00] transition duration-300">SEND
+                            MESSAGE</button>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col gap-[30px] items-center">
+                    <h2
+                        class="text-[50px]  w-full flex justify-center bg-gradient-to-r from-[#f5803c] to-[#00B2FF] bg-clip-text text-transparent font-bold">
+                        Connect With Us</h2>
+                    <div class="w-[70%] flex justify-center max-md:w-full items-start flex-col gap-[10px]">
+                        <div class="flex  gap-[13px] ">
+                            <div
+                                class="w-[50px] h-[50px] rounded-[50%] bg-gradient-to-r from-[#f5803c] to-[#00B2FF] flex justify-center items-center">
+                                📧</div>
+                            <div class="flex flex-col">
+                                <h4 class="text-[#FF5E00]">Email</h4>
+                                <p class="text-white">contact@electricxtra.tech</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-[13px]">
+                            <div
+                                class="w-[50px] h-[50px] rounded-[50%] bg-gradient-to-r from-[#f5803c] to-[#00B2FF] flex justify-center items-center">
+                                📱</div>
+                            <div class="flex flex-col">
+                                <h4 class="text-[#FF5E00]">Phone</h4>
+                                <p class="text-white">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex  gap-[13px]">
+                            <div
+                                class="w-[50px] h-[50px] rounded-[50%] bg-gradient-to-r from-[#f5803c] to-[#00B2FF] flex justify-center items-center">
+                                📍</div>
+                            <div class="flex flex-col">
+                                <h4 class="text-[#FF5E00]">Location</h4>
+                                <p class="text-white">Neo Tokyo, Sector 7</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+    </main>
+    <footer class="flex flex-col w-full gap-2 py-12">
+        <div class="w-full flex justify-center gap-4">
+            <a href=""
+                class="text-[#FF5E00] hover:text-[#00b3ff] hover:[box-shadow:0_0_30px_#00b3ff] transition duration-300">Privacy
+                Policy</a>
+            <a href=""
+                class="text-[#FF5E00] hover:text-[#00b3ff] hover:[box-shadow:0_0_30px_#00b3ff] transition duration-300">Terms
+                of Service</a>
+            <a href=""
+                class="text-[#FF5E00] hover:text-[#00b3ff] hover:[box-shadow:0_0_30px_#00b3ff] transition duration-300">Careers</a>
+        </div>
+        <div class="w-full flex justify-center">
+            <p class="text-white">© 2025 ELECTRIC XTRA. All rights reserved. Building tomorrow, today. | Design:
+                TemplateMo</p>
+        </div>
+    </footer>
+</body>
+
+</html>
